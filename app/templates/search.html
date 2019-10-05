@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>
+    Search:
+</h1>
+<form method="POST" action="">
+    <p>Search: {{ form.search_term }}</p>
+    <p><input type="submit" value="search"></p>
+</form>
+
+
+<div id='search results'>
+    <ol id="Search_list">
+        {%for tweet in tweets%}
+
+        <li>{{tweet["text"]}}</li>
+        <strong>{{tweet["score"]}}</strong> {%endfor%}
+    </ol>
+</div>
+
+
+
+
+{% endblock %}

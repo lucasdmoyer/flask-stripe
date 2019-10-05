@@ -73,3 +73,5 @@
 2013-07-17 13:50:32,421 INFO: errors [in /Users/michaelherman/Desktop/flask-basic-registration/app/__init__.py:25]
 2013-07-17 14:12:40,209 INFO: errors [in /Users/michaelherman/Desktop/flask-basic-registration/app/__init__.py:25]
 2013-07-17 14:12:40,634 INFO: errors [in /Users/michaelherman/Desktop/flask-basic-registration/app/__init__.py:25]
+2019-10-04 22:34:47,692 INFO: errors [in C:\development\Money with ML\midterm\flask-stripe\app\__init__.py:24]
+2019-10-04 22:34:49,710 INFO: errors [in C:\development\Money with ML\midterm\flask-stripe\app\__init__.py:24]
