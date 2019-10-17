@@ -1,15 +1,26 @@
 {% extends "base.html" %} {% block content %}
 
 <h1>
-    Search:
+    Type in the stock ticker for a particular stock:
 </h1>
+<h2>
+    We will scan twitter and give you the general sentiment for that stock
+</h2>
+<p>We pull 100 of the most recent tweets and run them through a sentiment analyzer. The scores are between -1 and 1 where negative numbers show a negative feeling towards that stock and postive numbers show a postive feeling towards that stock.
+</p>
 <form method="POST" action="">
     <p>Search: {{ form.search_term }}</p>
     <p><input type="submit" value="search"></p>
 </form>
 
-
+{% if tweets %}
 <div id='search results'>
+    <h3>Average score: {{average}}</h3>
+    {% if average > 0 %}
+    <h4>We see postive sentiment towards this stock. We recommend buying this stock</h4>
+    {% else %}
+    <h4>We see negative sentiment towards this stock, short it</h4>
+    {% endif %}
     <ol id="Search_list">
         {%for tweet in tweets%}
 
@@ -17,8 +28,4 @@
         <strong>{{tweet["score"]}}</strong> {%endfor%}
     </ol>
 </div>
-
-
-
-
-{% endblock %}
+{% else %} {% endif %} {% endblock %}

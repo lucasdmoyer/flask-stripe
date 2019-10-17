@@ -11,6 +11,7 @@ import tweepy
 import json
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import pyrebase
+import numpy as np
 
 app.config.from_pyfile('keys.cfg')
 stripe_keys = {
@@ -127,13 +128,16 @@ def search():
         if request.method == 'POST':
             search_tweet = request.form['search_term']
             t = []
-            max_tweets = 5
+            scores = []
+            max_tweets = 100
             for tweet in tweepy.Cursor(api.search, q=search_tweet).items(max_tweets):
                 text = tweet._json["text"]
                 ss = sid.polarity_scores(text)
                 t.append({'text': text, 'score': ss["compound"]})
+                scores.append(ss["compound"])
+            average_score = np.average(scores)
             tweets = t
-            return render_template('search.html', tweets=tweets, form=SearchForm(request.form))
+            return render_template('search.html', tweets=tweets, average=average_score,form=SearchForm(request.form))
     return render_template('search.html', form=SearchForm(request.form))
 
 @login_required

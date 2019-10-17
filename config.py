@@ -20,3 +20,5 @@ firebaseConfig = {
   "appId": "1:363827879320:web:632794d71c6a289bc4dfed",
   "measurementId": "G-EHQQVTLTRW"
 }
+
+nytimes = 'mAgfhvE6pGRxyk4cw3M0XOsh90tOuGBD'
