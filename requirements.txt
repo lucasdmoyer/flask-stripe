@@ -9,3 +9,4 @@ stripe==1.9.2
 Werkzeug==0.9.1
 tweepy
 nltk
+gunicorn
