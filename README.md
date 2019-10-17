@@ -1,3 +1,8 @@
+This is stock future.
+Stock future gives users the ability to search through large amounts of tweets and get the sentiment analysis data for a particular stock
+
+
+
 flask-stripe
 ========================
 
