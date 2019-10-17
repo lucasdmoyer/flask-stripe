@@ -6,7 +6,7 @@ WTForms
 itsdangerous
 requests
 stripe==1.9.2
-Werkzeug
+werkzeug==0.15.4
 tweepy
 nltk
 gunicorn
