@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block content %}
+<h1>
+    Prediction for Apple stock using historical data and LSTM neural net
+</h1>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    
+    th,
+    td {
+        padding: 15px;
+    }
+</style>
+
+<table style="width:100%">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+</table>
+
+
+
+{% if results.any() %}
+<div id='search results'>
+
+    <table style="width:100%">
+        <tr>
+            <th>Date</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Open</th>
+            <th>Close</th>
+            <th>Volume</th>
+            <th>Adj Close</th>
+            <th>Predicted Close</th>
+        </tr>
+        {%for row in results%}
+
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+            <td>{{row[6]}}</td>
+            <td>{{row[7]}}</td>
+        </tr>{%endfor%}
+</div>
+{% else %} {% endif %}{% endblock %}
