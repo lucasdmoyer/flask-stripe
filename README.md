@@ -1,5 +1,6 @@
 This is stock future.
-Stock future gives users the ability to search through large amounts of tweets and get the sentiment analysis data for a particular stock
+Stock future gives users the ability to search through large amounts of tweets and get the sentiment analysis data for a particular stock. Also LSTM for apple stock prediction.
+Part of final for Siraj make money with machine learning course
 
 
 
@@ -26,40 +27,10 @@ Use this app to integrate Flask and Stripe with a simple user registration syste
 1. clone the repo
 2. setup/activate a virtualenv
 3. install the requirements
-4. update the rdms (sqlite, mysql, postgres)
-5. create the database (*db_create.py*)
-6. Update the amount charged in the controller, *views.py*, and the subsequent views, *memebers.html* and *charge.html*.
+4. Run app.py
 
-## Todo
+## Features
 
-1. create better documentation
-2. add unit tests
-3. add email verification
-4. add the ability to make a subscription purchase as well
-5. create a payment form instead of the generic stripe popup
-
-## Screenshot
-
-![djang-stripe](http://content.screencast.com/users/Mike_Extentech/folders/Jing/media/754f9275-d5e4-4aa9-bfcf-a0f6fbebf63b/00000211.png)
-
-## Project structure
-
-    ├── app
-    │   ├── __init__.py
-    │   ├── forms.py
-    │   ├── keys.cfg
-    │   ├── models.py
-    │   ├── templates
-    │   │   ├── 404.html
-    │   │   ├── 500.html
-    │   │   ├── base.html
-    │   │   ├── charge.html
-    │   │   ├── login.html
-    │   │   ├── members.html
-    │   │   └── register.html
-    │   └── views.py
-    ├── config.py
-    ├── db_create.py
-    ├── error.log
-    ├── requirements.txt
-    └── run.py
+1. Shows sentiment analysis of any stock
+2. Stock prediction of Apple stock using LSTM
+3. User login and stripe paywall
